@@ -10,7 +10,7 @@ function App() {
   return (
     <RecoilRoot>
       <div className="App">
-        TODO
+        <h1>TODO</h1>
         <TodoForm />
         <TodoList />
       </div>

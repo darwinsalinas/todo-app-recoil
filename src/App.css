@@ -71,3 +71,11 @@
   background-color: whitesmoke;
   border-radius: 10px;
 }
+
+
+.count{
+  padding: 4px 8px;
+  background-color: black;
+  color: aliceblue;
+  border-radius: 50%;
+}

@@ -9,7 +9,7 @@ export default function TodoList() {
 
   return (
     <div>
-      {count} items in todo list
+      <p><span className="count">{count}</span> items in todo list</p>
       <hr />
       {todos.map((item) => (
         <TodoItem {...item} key={item.id} />
