@@ -7,6 +7,7 @@ export default function TodoForm() {
 
   const addTodo = (e) => {
     e.preventDefault();
+    if (!draft) return
     const maxId = todos[todos.length - 1]?.id || 0;
     setTodos([...todos, { id: maxId + 1, todo: draft }]);
     setDraft('')
