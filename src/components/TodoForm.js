@@ -9,6 +9,7 @@ export default function TodoForm() {
     e.preventDefault();
     const maxId = todos[todos.length - 1]?.id || 0;
     setTodos([...todos, { id: maxId + 1, todo: draft }]);
+    setDraft('')
   };
 
   return (
