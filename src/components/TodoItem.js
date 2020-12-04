@@ -1,8 +1,7 @@
-
-export default function TodoItem({todo}) {
-    return (
-        <div>
-            {todo}
-        </div>
-    )
+export default function TodoItem({ id, todo }) {
+  return (
+    <div>
+      {id} - {todo}
+    </div>
+  );
 }

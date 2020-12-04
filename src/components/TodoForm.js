@@ -1,14 +1,18 @@
 import { useRecoilState } from "recoil";
-import { draftTodoState } from "../store/atoms";
+import { draftTodoState, todosState } from "../store/atoms";
 
 export default function TodoForm() {
   const [draft, setDraft] = useRecoilState(draftTodoState);
+  const [todos, setTodos] = useRecoilState(todosState);
+
+  const addTodo = (e) => {
+    e.preventDefault();
+    const maxId = todos[todos.length - 1]?.id || 0;
+    setTodos([...todos, { id: maxId + 1, todo: draft }]);
+  };
 
   return (
-    <form className="form" onSubmit={(e)=>{
-      e.preventDefault()
-      alert('enviando')
-    }}>
+    <form className="form" onSubmit={(e) => addTodo(e)}>
       <input
         name="checkbox"
         id="checkbox"
@@ -22,7 +26,7 @@ export default function TodoForm() {
         className="form-text"
         placeholder="Create a new todo..."
         value={draft}
-        onChange={(e)=> setDraft(e.target.value)}
+        onChange={(e) => setDraft(e.target.value)}
       />
     </form>
   );

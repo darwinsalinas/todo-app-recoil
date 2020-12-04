@@ -8,9 +8,6 @@ export const draftTodoState = atom({
 export const todosState = atom({
   key: "todosState",
   default: [
-      {
-          id: 1,
-          todo: 'hola'
-      }
+
   ],
 });
