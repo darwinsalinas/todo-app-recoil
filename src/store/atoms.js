@@ -1,6 +1,16 @@
 import { atom } from "recoil";
 
 export const draftTodoState = atom({
-  key: "draftTodoState", // unique ID (with respect to other atoms/selectors)
-  default: "mi todo por defecto", // default value (aka initial value)
+  key: "draftTodoState",
+  default: "mi todo por defecto",
+});
+
+export const todosState = atom({
+  key: "todosState",
+  default: [
+      {
+          id: 1,
+          todo: 'hola'
+      }
+  ],
 });

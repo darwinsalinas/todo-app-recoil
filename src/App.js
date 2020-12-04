@@ -1,15 +1,10 @@
 // import logo from './logo.svg';
-import './App.css';
-import TodoForm from './components/TodoForm'
+import "./App.css";
 
-import {
-  RecoilRoot,
-  // atom,
-  // selector,
-  // useRecoilState,
-  // useRecoilValue,
-} from 'recoil';
+import { RecoilRoot } from "recoil";
 
+import TodoForm from "./components/TodoForm";
+import TodoList from "./components/TodoList";
 
 function App() {
   return (
@@ -17,6 +12,7 @@ function App() {
       <div className="App">
         TODO
         <TodoForm />
+        <TodoList />
       </div>
     </RecoilRoot>
   );
