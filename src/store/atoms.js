@@ -2,7 +2,7 @@ import { atom } from "recoil";
 
 export const draftTodoState = atom({
   key: "draftTodoState",
-  default: "mi todo por defecto",
+  default: "",
 });
 
 export const todosState = atom({
