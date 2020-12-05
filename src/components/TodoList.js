@@ -8,12 +8,14 @@ export default function TodoList() {
   const count = useRecoilValue(todoCountState);
 
   return (
-    <div>
-      <p><span className="count">{count}</span> items in todo list</p>
-      <hr />
+    <div className="list-container">
+      <div className="text-count"><span className="count">{count}</span> items in todo list</div>
+
       {todos.map((item) => (
         <TodoItem {...item} key={item.id} />
       ))}
+
+      <div className="text-count separator"><span className="count">{count}</span> items in todo list</div>
     </div>
   );
 }
